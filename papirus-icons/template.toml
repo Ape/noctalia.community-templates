@@ -1,6 +1,6 @@
 [catalog.papirus-icons]
 name = "Papirus Icon Theme"
-category = "icons"
+category = "misc"
 
 [templates.papirus_icons]
 input_path = "colors"
