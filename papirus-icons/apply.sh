@@ -2,7 +2,7 @@
 set -euo pipefail
 
 {
-  COLOR_FILE="$HOME/.cache/noctalia/papirus-icons/colors"
+  COLOR_FILE="$(dirname "$0")/colors-final"
   [[ -f "$COLOR_FILE" ]] || exit 0
 
   # 1. Read the file instantly into RAM
@@ -54,6 +54,6 @@ set -euo pipefail
   fi
  
   # 6. Apply icons instantly
-  [[ -n "$closest" ]] && "$HOME/.config/noctalia/templates/papirus-folders" -C "$closest" || :
+  [[ -n "$closest" ]] && "$(dirname "$0")/papirus-folders" -C "$closest" || :
 
 }
